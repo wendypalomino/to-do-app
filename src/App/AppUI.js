@@ -16,6 +16,7 @@ function AppUI() {
     const {
         error,
         loading,
+        todos,
         searchedTodos,
         openModal,
         setOpenModal,
@@ -28,7 +29,7 @@ function AppUI() {
             <TodoList>
                 {error && <TodoError/>}
                 {loading && <TodosLoading/>}
-                {(!!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>}
+                {(!loading && !todos.length ) && <p>Crea tu primer TODO!</p>}
                 {searchedTodos.map(todo => (
                     <TodoItem
                         key={todo.text}

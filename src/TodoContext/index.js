@@ -66,7 +66,8 @@ function TodosProvider(props){
             onDelete,
             openModal,
             setOpenModal,
-            addTodo
+            addTodo,
+            todos
         }}>
             {props.children}
         </TodosContext.Provider>
